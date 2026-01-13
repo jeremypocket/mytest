@@ -60,32 +60,87 @@ const server = net.createServer((clientSocket) => {
   renderClientList();
 
   let state = 'handshake'; // handshake -> request -> connected
+  let targetSocket = null;
+  let handshakeTimeout = null;
+  let requestTimeout = null;
+
+  // 清理函数
+  const cleanup = () => {
+    if (handshakeTimeout) {
+      clearTimeout(handshakeTimeout);
+      handshakeTimeout = null;
+    }
+    if (requestTimeout) {
+      clearTimeout(requestTimeout);
+      requestTimeout = null;
+    }
+    if (targetSocket && !targetSocket.destroyed) {
+      targetSocket.destroy();
+    }
+  };
+
+  // 设置握手超时（10秒）
+  handshakeTimeout = setTimeout(() => {
+    if (state === 'handshake') {
+      clientSocket.destroy();
+      cleanup();
+    }
+  }, 10000);
 
   // 处理客户端数据
   clientSocket.once('data', (data) => {
+    if (handshakeTimeout) {
+      clearTimeout(handshakeTimeout);
+      handshakeTimeout = null;
+    }
     if (state === 'handshake') {
-      handleHandshake(clientSocket, data);
+      // 创建一个包装的 handleRequest 函数来保存 targetSocket
+      const wrappedHandleRequest = (socket, requestData) => {
+        if (requestTimeout) {
+          clearTimeout(requestTimeout);
+          requestTimeout = null;
+        }
+        handleRequest(socket, requestData, (ts) => {
+          targetSocket = ts;
+          state = 'connected';
+        });
+      };
+      
+      handleHandshake(clientSocket, data, wrappedHandleRequest, () => {
+        state = 'request';
+        // 设置请求超时（30秒）
+        requestTimeout = setTimeout(() => {
+          if (state === 'request') {
+            clientSocket.destroy();
+            cleanup();
+          }
+        }, 30000);
+      });
     }
   });
 
-  // 处理客户端错误（静默处理）
-  clientSocket.on('error', () => {});
+  // 处理客户端错误
+  clientSocket.on('error', (err) => {
+    cleanup();
+  });
 
-  // 处理客户端断开（静默处理）
-  clientSocket.on('close', () => {});
+  // 处理客户端断开
+  clientSocket.on('close', () => {
+    cleanup();
+  });
 });
 
 // 处理 SOCKS5 握手
-function handleHandshake(socket, data) {
+function handleHandshake(socket, data, requestHandler, onRequestReady) {
   // 检查版本号
   if (data.length < 2 || data[0] !== SOCKS5_VERSION) {
-    socket.end();
+    socket.destroy();
     return;
   }
 
   const nMethods = data[1];
   if (data.length < 2 + nMethods) {
-    socket.end();
+    socket.destroy();
     return;
   }
 
@@ -99,23 +154,34 @@ function handleHandshake(socket, data) {
 
   // 发送选择的认证方法
   const response = Buffer.from([SOCKS5_VERSION, selectedMethod]);
-  socket.write(response);
+  if (!socket.write(response)) {
+    socket.once('drain', () => {});
+  }
 
   if (selectedMethod === AUTH_METHOD_NOT_ACCEPTABLE) {
-    socket.end();
+    socket.destroy();
     return;
+  }
+
+  if (onRequestReady) {
+    onRequestReady();
   }
 
   // 等待客户端请求
   socket.once('data', (requestData) => {
-    handleRequest(socket, requestData);
+    if (requestHandler) {
+      requestHandler(socket, requestData);
+    } else {
+      handleRequest(socket, requestData);
+    }
   });
 }
 
 // 处理 SOCKS5 连接请求
-function handleRequest(socket, data) {
+function handleRequest(socket, data, onTargetCreated) {
   if (data.length < 4 || data[0] !== SOCKS5_VERSION) {
     sendReply(socket, REP_GENERAL_FAILURE, ATYP_IPV4, '0.0.0.0', 0);
+    socket.destroy();
     return;
   }
 
@@ -125,6 +191,7 @@ function handleRequest(socket, data) {
   // 只支持 CONNECT 命令
   if (cmd !== CMD_CONNECT) {
     sendReply(socket, REP_COMMAND_NOT_SUPPORTED, ATYP_IPV4, '0.0.0.0', 0);
+    socket.destroy();
     return;
   }
 
@@ -137,6 +204,7 @@ function handleRequest(socket, data) {
     // IPv4 地址
     if (data.length < 10) {
       sendReply(socket, REP_GENERAL_FAILURE, ATYP_IPV4, '0.0.0.0', 0);
+      socket.destroy();
       return;
     }
     host = `${data[4]}.${data[5]}.${data[6]}.${data[7]}`;
@@ -146,11 +214,13 @@ function handleRequest(socket, data) {
     // 域名
     if (data.length < 5) {
       sendReply(socket, REP_GENERAL_FAILURE, ATYP_IPV4, '0.0.0.0', 0);
+      socket.destroy();
       return;
     }
     const domainLength = data[4];
     if (data.length < 5 + domainLength + 2) {
       sendReply(socket, REP_GENERAL_FAILURE, ATYP_IPV4, '0.0.0.0', 0);
+      socket.destroy();
       return;
     }
     host = data.slice(5, 5 + domainLength).toString('utf8');
@@ -160,6 +230,7 @@ function handleRequest(socket, data) {
     // IPv6 地址
     if (data.length < 22) {
       sendReply(socket, REP_GENERAL_FAILURE, ATYP_IPV4, '0.0.0.0', 0);
+      socket.destroy();
       return;
     }
     const ipv6Bytes = data.slice(4, 20);
@@ -176,13 +247,15 @@ function handleRequest(socket, data) {
     offset = 22;
   } else {
     sendReply(socket, REP_ADDRESS_TYPE_NOT_SUPPORTED, ATYP_IPV4, '0.0.0.0', 0);
+    socket.destroy();
     return;
   }
 
-  // 连接到目标服务器
+  // 连接到目标服务器（设置连接超时30秒）
   const targetSocket = net.createConnection({
     host: host,
-    port: port
+    port: port,
+    timeout: 30000
   }, () => {
     // 连接成功
     
@@ -193,18 +266,44 @@ function handleRequest(socket, data) {
     // 发送成功响应
     sendReply(socket, REP_SUCCESS, atyp, localAddress, localPort, data.slice(4, offset));
 
-    // 开始双向数据转发
-    socket.pipe(targetSocket);
-    targetSocket.pipe(socket);
+    // 设置 socket 为不自动关闭
+    socket.setKeepAlive(true, 60000);
+    targetSocket.setKeepAlive(true, 60000);
+
+    // 处理背压：暂停/恢复数据流
+    socket.on('drain', () => {
+      targetSocket.resume();
+    });
+
+    targetSocket.on('drain', () => {
+      socket.resume();
+    });
+
+    // 开始双向数据转发（使用 pauseOnDrain 处理背压）
+    socket.pipe(targetSocket, { end: false });
+    targetSocket.pipe(socket, { end: false });
 
     // 处理连接关闭
-    socket.on('close', () => {
-      targetSocket.end();
-    });
+    const cleanup = () => {
+      if (!socket.destroyed) {
+        socket.destroy();
+      }
+      if (!targetSocket.destroyed) {
+        targetSocket.destroy();
+      }
+    };
 
-    targetSocket.on('close', () => {
-      socket.end();
-    });
+    socket.on('close', cleanup);
+    socket.on('error', cleanup);
+    targetSocket.on('close', cleanup);
+    targetSocket.on('error', cleanup);
+  });
+
+  // 处理连接超时
+  targetSocket.on('timeout', () => {
+    sendReply(socket, REP_TTL_EXPIRED, ATYP_IPV4, '0.0.0.0', 0);
+    socket.destroy();
+    targetSocket.destroy();
   });
 
   // 处理连接错误
@@ -220,9 +319,18 @@ function handleRequest(socket, data) {
       rep = REP_NETWORK_UNREACHABLE;
     }
 
-    sendReply(socket, rep, ATYP_IPV4, '0.0.0.0', 0);
-    socket.end();
+    if (!socket.destroyed) {
+      sendReply(socket, rep, ATYP_IPV4, '0.0.0.0', 0);
+      socket.destroy();
+    }
+    if (!targetSocket.destroyed) {
+      targetSocket.destroy();
+    }
   });
+
+  if (onTargetCreated) {
+    onTargetCreated(targetSocket);
+  }
 }
 
 // 发送 SOCKS5 响应
@@ -276,7 +384,15 @@ function sendReply(socket, rep, atyp, host, port, originalAddressData = null) {
     response.writeUInt16BE(port, 8);
   }
 
-  socket.write(response);
+  // 检查 socket 是否已销毁
+  if (socket.destroyed) {
+    return;
+  }
+  
+  // 写入响应，如果缓冲区满则等待 drain 事件
+  if (!socket.write(response)) {
+    socket.once('drain', () => {});
+  }
 }
 
 // 启动服务器
