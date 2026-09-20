@@ -1,0 +1,14 @@
+{
+  "name": "socks5-proxy-server",
+  "version": "1.0.0",
+  "description": "SOCKS5 代理服务器",
+  "main": "proxy.js",
+  "scripts": {
+    "start": "node proxy.js",
+    "start:socks5": "node proxy.js",
+    "start:h2": "node h2-proxy.js"
+  },
+  "dependencies": {
+    "log-update": "^4.0.0"
+  }
+}

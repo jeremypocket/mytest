@@ -1,0 +1,7 @@
+node_modules/
+.env
+figma-export/
+figma-export-fills/
+figma-export-leaves/
+*.log
+.idea

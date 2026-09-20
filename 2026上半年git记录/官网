@@ -1,0 +1,79 @@
+YNJPZKD-43982 【官网】个人中心下载支持大批量导出 Jeremy Today 09:46
+YNJPZKD-43982 【官网】个人中心下载支持大批量导出 Jeremy Today 09:42
+Merge pull request #1223 in VNEX/sa-web from feature/202606_cnpm_7001 to master Wang Jie(RD) 2026/6/8 11:08
+去掉7001端口 Jeremy 2026/6/8 11:08
+Merge pull request #1221 in VNEX/sa-web from feature/202604_print_log to master Wang Jie(RD) 2026/5/11 15:51
+马来About页面修改 Jeremy 2026/5/11 15:50
+马来About页面修改 Jeremy 2026/5/6 16:16
+Merge pull request #1218 in VNEX/sa-web from feature/202604_print_log to master Wang Jie(RD) 2026/4/29 15:30
+编辑界面，母单长宽高、子单长宽高互斥逻辑修复 Jeremy 2026/4/29 15:30
+Merge pull request #1216 in VNEX/sa-web from feature/202604_print_log to master Wang Jie(RD) 2026/4/29 14:55
+母单长宽高、子单长宽高互斥逻辑修复 Jeremy 2026/4/29 14:54
+母单长宽高、子单长宽高互斥逻辑修复 Jeremy 2026/4/29 14:42
+马来首页界面图片交互格式优化 Jeremy 2026/4/29 13:54
+Merge pull request #1215 in VNEX/sa-web from feature/202604_print_log to master Wang Jie(RD) 2026/4/23 13:54
+优化弹窗加载速度 Jeremy 2026/4/23 10:05
+拦截件逻辑处理正确 Jeremy 2026/4/23 09:53
+处理快运打印流程优化 Jeremy 2026/4/22 15:19
+处理快运打印流程优化 Jeremy 2026/4/22 15:00
+处理快运打印流程优化 Jeremy 2026/4/22 13:46
+处理快运打印流程优化 Jeremy 2026/4/22 12:08
+打印流程优化 Jeremy 2026/4/22 11:32
+打印流程优化 Jeremy 2026/4/22 11:24
+打印流程优化 Jeremy 2026/4/22 10:53
+重量范围使用后端给的值 Jeremy 2026/4/21 17:45
+重量范围使用后端给的值 Jeremy 2026/4/21 17:35
+重量范围使用后端给的值 Jeremy 2026/4/21 17:08
+重量录入弹窗自动聚焦 Jeremy 2026/4/21 16:31
+订单打印修改重量功能实现 Jeremy 2026/4/21 16:26
+订单打印修改重量功能实现 Jeremy 2026/4/21 15:51
+Merge pull request #1202 in VNEX/sa-web from feature/202604_my_new_home to master Wang Jie(RD) 2026/4/10 11:22
+马来首页改版 Jeremy 2026/4/10 11:19
+马来首页改版 Jeremy 2026/4/9 15:30
+Merge pull request #1200 in VNEX/sa-web from feature/2026_my_home_banner to master Wang Jie(RD) 2026/4/9 11:06
+打印按单号查询 Jeremy 2026/4/7 17:19
+打印按单号查询 Jeremy 2026/4/7 16:41
+打印按单号查询 Jeremy 2026/4/7 11:57
+Merge pull request #1195 in VNEX/sa-web from feature/2026_my_home_banner to master Wang Jie(RD) 2026/4/7 09:31
+修改马来首页图片 Jeremy 2026/4/7 09:31
+Merge pull request #1194 in VNEX/sa-web from feature/2026_my_home_banner to master Wang Jie(RD) 2026/4/2 14:30
+修改马来首页图片 Jeremy 2026/4/2 14:30
+Merge pull request #1192 in VNEX/sa-web from feature/YNJPZKD-42034 to master Wang Jie(RD) 2026/3/3 17:30
+YNJPZKD-42034 原有滑块验证码后有逻辑，需要保留 Jeremy 2026/2/28 16:45
+YNJPZKD-42034 原有滑块验证码后有逻辑，需要保留 Jeremy 2026/2/28 16:37
+添加统一验证码YNJPZKD-42034 Jeremy 2026/2/26 12:01
+添加统一验证码YNJPZKD-42034 Jeremy 2026/2/26 11:28
+添加统一验证码YNJPZKD-42034 Jeremy 2026/2/26 10:57
+添加统一验证码YNJPZKD-42034 Jeremy 2026/2/26 10:38
+Merge pull request #1185 in VNEX/sa-web from feature/202601_aikf to master Wang Jie(RD) 2026/2/4 15:06
+Merge pull request #1182 in VNEX/sa-web from feature/YNJPZKD-42055-appx9-web-批量半拦截 to master Zou Yongjian 2026/1/28 14:58
+Merge pull request #1180 in VNEX/sa-web from feature/YNJPZKD-42150-web-web端批量打印页面支持信息筛选 to master Zou Yongjian 2026/1/28 10:01
+未登录状态判断 Jeremy 2026/1/27 10:42
+feat：批量打印筛选修改 Zou Yongjian 2026/1/27 10:38
+feat: 批量打印筛选itemName Zou Yongjian 2026/1/27 09:54
+H5 AI客服打开的页面由后台控制 Jeremy 2026/1/26 11:46
+H5 AI客服打开的页面由后台控制 Jeremy 2026/1/26 11:35
+feat:文案修改 Zou Yongjian 2026/1/26 11:30
+Web AI客服打开的页面由后台控制 Jeremy 2026/1/26 11:29
+feat: 批量打印修改 Zou Yongjian 2026/1/26 10:43
+feat: 马来快运重复下单继续选项变空了 Zou Yongjian 2026/1/24 23:11
+feat: 马来重复下单继续选项变空了 Zou Yongjian 2026/1/23 17:31
+feat: 快运批量下单下单后未弹窗 Zou Yongjian 2026/1/23 16:52
+feat: 批量打印筛选框可输入模糊搜索 Zou Yongjian 2026/1/23 16:33
+feat: 半拦截翻译修改 Zou Yongjian 2026/1/23 16:02
+feat: 批量录单半拦截问题修改 Zou Yongjian 2026/1/23 16:01
+feat: 批量半拦截问题修改 Zou Yongjian 2026/1/23 09:47
+feat: 快运修改订单拦截修改 Zou Yongjian 2026/1/22 15:30
+feat: 快运修改订单拦截下单兼容 Zou Yongjian 2026/1/22 11:06
+Merge branch 'feature/YNJPZKD-41508-app-越南快运启网' into feature/YNJPZKD-42055-appx9-web-批量半拦截 Zou Yongjian 2026/1/22 10:39
+feat: web端批量打印页面支持信息筛选 Zou Yongjian 2026/1/22 10:32
+feat: 批量下单运费查询加logisticsType字段 Zou Yongjian 2026/1/21 17:02
+feat: 越南双网文案修改 Zou Yongjian 2026/1/19 17:58
+feat: 拦截件修改 Zou Yongjian 2026/1/19 10:48
+Merge pull request #1149 in VNEX/sa-web from hotfix/suggestList_onlyVN to master Zou Yongjian 2026/1/8 12:05
+feat: 推荐地址逻辑只在越南生效 Zou Yongjian 2026/1/8 12:04
+Merge pull request #1148 in VNEX/sa-web from feature/YNJPZKD-41763-web-站点查询整体优化 to master Zou Yongjian 2026/1/7 10:06
+Merge pull request #1147 in VNEX/sa-web from feature/YNJPZKD-40651-官网批量录单校验行政区划级别 to master Zou Yongjian 2026/1/6 16:45
+Merge pull request #1137 in VNEX/sa-web from feature/202512_saas to master Wang Jie(RD) 2026/1/5 17:18
+SaaS增加下载中心 Jeremy 2026/1/4 17:00
+feat:【马来官网】WEB端站点查询整体优化 Zou Yongjian 2026/1/4 16:11

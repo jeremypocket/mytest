@@ -1,0 +1,74 @@
+YNJPZKD-43982 【官网】个人中心下载支持大批量导出 Jeremy Today 09:42
+Merge pull request #570 in VNEX/thai-ex from feature/202606_batch_cancel to master Wang Jie(RD) 2026/6/24 11:07
+批量取消、单条取消，的原因改回原来的下拉组件，且下方补充之前的sorry图片 Jeremy 2026/6/24 11:06
+批量取消原因平铺开 Jeremy 2026/6/15 11:40
+批量取消订单实现 Jeremy 2026/6/12 11:52
+Merge pull request #563 in VNEX/thai-ex from YNJPZKD-43637 to master Wang Jie(RD) 2026/5/20 14:27
+YNJPZKD-43637【前端】【泰国】新增招聘广告页 工作地址根据工作自动切换 Jeremy 2026/5/20 13:40
+YNJPZKD-43637【前端】【泰国】新增招聘广告页 工作地址根据工作自动切换 Jeremy 2026/5/20 10:59
+YNJPZKD-43637【前端】【泰国】新增招聘广告页 调整入口位置 Jeremy 2026/5/15 15:40
+YNJPZKD-43637【前端】【泰国】新增招聘广告页 Jeremy 2026/5/14 16:54
+YNJPZKD-43637【前端】【泰国】新增招聘广告页 Jeremy 2026/5/14 16:36
+Merge pull request #562 in VNEX/thai-ex from feature/202604_order_print to master Wang Jie(RD) 2026/4/27 11:02
+YNJPZKD-43359【官网】弹窗改为登录+多语言切换 Jeremy 2026/4/27 11:02
+Merge pull request #561 in VNEX/thai-ex from feature/202604_order_print to master Wang Jie(RD) 2026/4/27 10:53
+YNJPZKD-43359【官网】弹窗改为登录+多语言切换 Jeremy 2026/4/27 10:52
+Merge pull request #560 in VNEX/thai-ex from feature/202604_order_print to master Wang Jie(RD) 2026/4/9 11:07
+打印列表增加按单号筛选 Jeremy 2026/4/7 17:19
+打印列表增加按单号筛选 Jeremy 2026/4/7 11:04
+Merge pull request #559 in VNEX/thai-ex from feature/2026_multi_email to master Wang Jie(RD) 2026/4/1 16:55
+Merge pull request #558 in VNEX/thai-ex from feature/2026_add_home_barcode to master Wang Jie(RD) 2026/3/30 09:56
+首页显示二维码 Jeremy 2026/3/30 09:56
+展示额外邮箱字段,简化写法 Jeremy 2026/3/27 17:09
+展示额外邮箱字段,简化写法 Jeremy 2026/3/26 15:48
+展示额外邮箱字段 Jeremy 2026/3/26 15:21
+Merge pull request #556 in VNEX/thai-ex from fix/2026_sku to master Wang Jie(RD) 2026/3/26 10:52
+解决冲突 Jeremy 2026/3/26 10:50
+忽略yarn.lock Jeremy 2026/3/26 10:48
+Merge pull request #555 in VNEX/thai-ex from feature/2026_saas to master Wang Jie(RD) 2026/3/24 10:30
+YNJPZKD-42870 泰国官网APP隐藏泰马跨境下单入口 Jeremy 2026/3/24 10:29
+Merge pull request #554 in VNEX/thai-ex from feature/2026_saas to master Wang Jie(RD) 2026/3/23 16:36
+YNJPZKD-42870 泰国官网APP隐藏泰马跨境下单入口 Jeremy 2026/3/23 16:35
+Merge pull request #552 in VNEX/thai-ex from feature/2026_saas to master Wang Jie(RD) 2026/3/16 10:02
+泰国saas调整接口地址 Jeremy 2026/3/16 09:57
+Merge pull request #551 in VNEX/thai-ex from feature/2026_saas to master Wang Jie(RD) 2026/3/16 09:42
+泰国saas调整接口地址 Jeremy 2026/3/16 09:42
+Merge pull request #550 in VNEX/thai-ex from feature/2026_saas to master Wang Jie(RD) 2026/3/13 16:21
+泰国saas Jeremy 2026/3/13 16:21
+Merge pull request #549 in VNEX/thai-ex from feature/2026_saas to master Wang Jie(RD) 2026/3/13 15:50
+泰国saas Jeremy 2026/3/13 15:50
+Merge pull request #548 in VNEX/thai-ex from feature/2026_saas to master Wang Jie(RD) 2026/3/13 15:37
+泰国saas Jeremy 2026/3/13 15:37
+泰国saas Jeremy 2026/3/13 15:13
+Merge pull request #545 in VNEX/thai-ex from feature/YNJPZKD-42034 to master Wang Jie(RD) 2026/3/4 09:32
+sku字段改名 Jeremy 2026/3/3 10:42
+YNJPZKD-42034 【前端】【官网】所有短信发送入口新增滑动验证码 Jeremy 2026/2/27 11:41
+YNJPZKD-42034 【前端】【官网】所有短信发送入口新增滑动验证码 Jeremy 2026/2/27 09:36
+修改长宽高初始值 Jeremy 2026/2/9 10:30
+解决sku的bug Jeremy 2026/2/9 10:06
+解决微任务引起的bug Jeremy 2026/2/6 16:52
+子单长宽高和主单长宽高联动 Jeremy 2026/2/6 16:43
+sku打印格式调整 Jeremy 2026/2/6 16:12
+sku列表展示 Jeremy 2026/2/5 10:16
+Merge pull request #536 in VNEX/thai-ex from feature/202601_aikf to master Wang Jie(RD) 2026/2/4 16:19
+泰国AI客服，获取登录用户信息 Jeremy 2026/2/4 16:19
+Merge pull request #534 in VNEX/thai-ex from feature/202601_aikf to master Wang Jie(RD) 2026/2/4 15:51
+泰国AI客服，获取登录用户信息 Jeremy 2026/2/4 15:51
+SKU选择后重新计算费用 YNJPZKD-41859【泰国】官网用户APP SKU客户改造 Jeremy 2026/2/3 13:52
+SKU录入方式调整 YNJPZKD-41859【泰国】官网用户APP SKU客户改造 Jeremy 2026/2/3 10:20
+sku 导入实现 Jeremy 2026/2/2 15:55
+A4模版打印增加sku Jeremy 2026/2/2 11:33
+openspec 历史迁入 Jeremy 2026/2/2 11:24
+单票下单去掉无用导入 Jeremy 2026/2/2 11:11
+下载模版支持根据收件人区分，用来实现sku导入 Jeremy 2026/2/2 11:04
+订单详情展示sku Jeremy 2026/2/2 11:01
+单票下单，支持sku录入 Jeremy 2026/2/2 11:00
+新增 SkuSelect 组件 Jeremy 2026/2/2 10:58
+删掉无用日志 Jeremy 2026/2/2 10:55
+手机端仅展示sku Jeremy 2026/1/30 15:23
+升级 ts 版本以此支持?.语法 Jeremy 2026/1/30 10:35
+openspec 定义sku需求 Jeremy 2026/1/29 17:03
+openspec 定义sku需求 Jeremy 2026/1/29 16:57
+解决启动失败问题 Jeremy 2026/1/29 16:57
+Merge pull request #528 in VNEX/thai-ex from feature/YNJPZKD-41773-web-web端批量打印页面支持信息筛选 to master Zou Yongjian 2026/1/28 11:55
+feat: 批量打印筛选 Zou Yongjian 2026/1/28 11:55

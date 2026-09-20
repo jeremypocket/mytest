@@ -1,12 +1,13 @@
 {
-  "name": "socks5-proxy-server",
+  "name": "figma-export-fills",
   "version": "1.0.0",
-  "description": "SOCKS5 代理服务器",
-  "main": "proxy.js",
-  "scripts": {
-    "start": "node proxy.js"
+  "description": "从 Figma 设计稿一键导出全部图片填充 (Image Fills)",
+  "type": "module",
+  "bin": {
+    "figma-export-fills": "export-figma-fills.js",
+    "figma-export-leaves": "export-figma-leaves.js"
   },
-  "dependencies": {
-    "log-update": "^4.0.0"
+  "engines": {
+    "node": ">=18"
   }
 }

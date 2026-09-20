@@ -1,0 +1,86 @@
+切换大区工作台，bug修复 Jeremy Yesterday 09:16
+切换大区工作台，支持选择国家级别权限 Jeremy 2026/6/23 11:46
+马来工作台质量看板增加绩效得分 Jeremy 2026/6/23 11:16
+自动线供件台的效率单位  改成 “件/当天累计” Jeremy 2026/6/23 10:58
+主题页面无权限的时候给与用户提示 Jeremy 2026/6/16 10:47
+大区工作台不允许选择全网 Jeremy 2026/6/15 14:31
+越南质量增加客户KPI Jeremy 2026/6/15 13:54
+大区工作台网络质量bug修复 Jeremy 2026/6/15 11:53
+切换APP时，只要国家变更就重定向 Jeremy 2026/6/12 10:00
+切换APP时，只要国家变更就重定向 Jeremy 2026/6/12 09:23
+重构弄错，访问日志 Jeremy 2026/6/12 07:25
+马来app可点效果增强 Jeremy 2026/6/11 23:13
+有国家信息时候才记录当前国家 Jeremy 2026/6/11 22:57
+有国家信息时候才记录当前国家 Jeremy 2026/6/11 22:57
+按大区 orgCode 从完整数据权限中筛出对应节点及其下级组织权限，保留其他国家的数据权限 Jeremy 2026/6/11 22:43
+大区APP重构，切换大区功能优化 Jeremy 2026/6/11 18:09
+大区APP重构，当前的APP形态记录改成持久化 Jeremy 2026/6/11 15:22
+大区APP重构，可自由切换大区APP和国家APP Jeremy 2026/6/11 15:06
+大区APP重构，可自由切换大区APP和国家APP Jeremy 2026/6/11 14:05
+大区APP重构，可自由切换大区APP和国家APP Jeremy 2026/6/11 13:38
+大区APP重构，合并重复代码 Jeremy 2026/6/11 11:27
+大区APP重构，合并重复代码 Jeremy 2026/6/11 10:40
+合并相同代码 Jeremy 2026/6/10 15:34
+Merge pull request #1713 in VNEX/sea-vdata-antv from master to feature/202606_jeremy Wang Jie(RD) 2026/6/10 14:37
+Merge pull request #1712 in VNEX/sea-vdata-antv from feature/202606_jeremy to master Wang Jie(RD) 2026/6/10 10:43
+快运今日签收隐藏详情页面 Jeremy 2026/6/10 10:43
+Merge pull request #1710 in VNEX/sea-vdata-antv from feature/202606_jeremy to master Wang Jie(RD) 2026/6/10 10:28
+重新调整列宽 Jeremy 2026/6/5 12:14
+马来网络质量详情下砖完成 Jeremy 2026/6/4 13:24
+马来网络质量增加多维分析表格 Jeremy 2026/6/4 12:38
+加快启动速度 Jeremy 2026/6/4 12:00
+大区工作台马来网络质量记录搜索参数 Jeremy 2026/6/4 11:32
+大区工作台马来网络质量修改 Jeremy 2026/6/4 11:27
+语法错误解决 Jeremy 2026/6/3 15:42
+解决报错 Jeremy 2026/6/3 15:02
+Merge pull request #1690 in VNEX/sea-vdata-antv from feature/202605_jeremy to master Wang Jie(RD) 2026/5/22 13:38
+去掉7001端口 Jeremy 2026/5/22 10:05
+客户KPI微调 Jeremy 2026/5/21 15:12
+马来的融合 经营日报，传参修改 Jeremy 2026/5/19 15:46
+增加“正向时效内应签件量” Jeremy 2026/5/19 15:21
+增加已揽件量（含库存）、揽件率（含库存） Jeremy 2026/5/19 15:08
+马来经营页面不区分快递快运，改成显示融合 Jeremy 2026/5/19 14:41
+Merge pull request #1681 in VNEX/sea-vdata-antv from feature/202604_jeremy to master Wang Jie(RD) 2026/5/8 13:41
+应派数据没显示问题西服 Jeremy 2026/4/23 10:12
+YNJPZKD-43257【数字App】1.49增加实时设备 优化交互 Jeremy 2026/4/22 16:48
+YNJPZKD-43257【数字App】1.49增加实时设备 优化交互 Jeremy 2026/4/22 14:21
+YNJPZKD-43257【数字App】1.49增加实时设备 优化交互 Jeremy 2026/4/21 11:01
+YNJPZKD-43257【数字App】1.49增加实时设备 优化交互 Jeremy 2026/4/21 10:47
+YNJPZKD-43257【数字App】1.49增加实时设备 设置默认筛选分拨 Jeremy 2026/4/21 10:24
+YNJPZKD-43257【数字App】1.49增加实时设备 设置默认筛选分拨 Jeremy 2026/4/21 10:21
+YNJPZKD-43257【数字App】1.49增加实时设备 Jeremy 2026/4/20 17:04
+YNJPZKD-43257【数字App】1.49增加实时设备 Jeremy 2026/4/20 16:53
+YNJPZKD-43257【数字App】1.49增加实时设备 Jeremy 2026/4/20 16:33
+YNJPZKD-43257【数字App】1.49增加实时设备效率 Jeremy 2026/4/20 15:49
+YNJPZKD-43257【数字App】1.49增加实时设备效率 Jeremy 2026/4/20 14:47
+首页卡片权限梳理 Jeremy 2026/4/20 11:34
+派件小件员  缺省 固定在第一行 Jeremy 2026/4/20 10:58
+看板使用日月周段来实现 Jeremy 2026/4/17 12:51
+增加  日月周段 搜索 Jeremy 2026/4/17 12:13
+增加  日月周段 Jeremy 2026/4/17 11:48
+组织树选项组件多选算法调优 Jeremy 2026/3/10 15:25
+Merge pull request #1594 in VNEX/sea-vdata-antv from feature/202603_org to feature/yy_YNJPZKD-42594-webapp1.47_B20260305 Wang Jie(RD) 2026/3/10 13:33
+组织树选项组件多选算法调优 Jeremy 2026/3/10 13:32
+Merge pull request #1592 in VNEX/sea-vdata-antv from feature/202603_org to feature/yy_YNJPZKD-42594-webapp1.47_B20260305 Wang Jie(RD) 2026/3/10 11:26
+组织树选项组件多选算法调优 Jeremy 2026/3/10 11:26
+组织树选项组件多选算法调优 Jeremy 2026/3/10 10:50
+组织树选项组件多选算法调优 Jeremy 2026/3/10 10:43
+组织树选项组件调整逻辑 Jeremy 2026/3/5 14:07
+组织树选项组件调整逻辑 Jeremy 2026/3/5 09:54
+组织树选项组件调整逻辑 Jeremy 2026/3/5 09:43
+交互体验优化 Jeremy 2026/3/4 17:37
+实现多选功能 Jeremy 2026/3/4 17:19
+泰国不显示片区 Jeremy 2026/3/3 14:40
+Merge pull request #1569 in VNEX/sea-vdata-antv from feature/202603_table to master Wang Jie(RD) 2026/2/27 13:44
+仅本地开启自适应表格 Jeremy 2026/2/27 10:36
+Merge pull request #1560 in VNEX/sea-vdata-antv from feature/202602_table to master Wang Jie(RD) 2026/2/11 15:21
+横屏自适应宽度计算考虑安全窗口 Jeremy 2026/2/11 14:45
+Merge pull request #1558 in VNEX/sea-vdata-antv from feature/202602_table to master Wang Jie(RD) 2026/2/11 13:38
+横屏查看表格bug修复 Jeremy 2026/2/11 13:37
+Merge pull request #1556 in VNEX/sea-vdata-antv from feature/202602_table to master Wang Jie(RD) 2026/2/11 13:23
+横屏查看表格用户体验优化 Jeremy 2026/2/11 13:22
+优化横屏组件 Jeremy 2026/2/11 13:05
+动态表格宽度，调整算法改进 Jeremy 2026/2/11 12:55
+调整日志 Jeremy 2026/2/11 12:41
+开发表格自适应宽度 Jeremy 2026/2/11 12:32
+解决缺失key引起的报错 Jeremy 2026/2/10 16:23
